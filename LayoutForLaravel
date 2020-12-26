@@ -7,18 +7,18 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="adminLTE/plugins/fontawesome-free/css/all.min.css">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="adminLTE/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="{{asset('adminLTE/plugins/fontawesome-free/css/all.min.css')}}">
+
   <!-- Theme style -->
-  <link rel="stylesheet" href="adminLTE/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="{{asset('adminLTE/dist/css/adminlte.min.css')}}">
+  <!-- Icheck -->
+  <link rel="stylesheet" href="{{asset('adminLTE/plugins/icheck-bootstrap/icheck-bootstrap.css')}}">
   <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="adminLTE/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="{{asset('adminLTE/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
-
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
@@ -57,7 +57,7 @@
   <aside class="main-sidebar elevation-4 sidebar-light-olive">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="adminLTE/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="{{asset('adminLTE/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">HESRAM</span>
     </a>
@@ -67,10 +67,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="adminLTE/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="{{asset('adminLTE/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Luis Bill Heskey Rodriguez</a>
+          <a href="#" class="d-block">Alexander Pierce</a>
         </div>
       </div>
 
@@ -90,7 +90,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a href="/paciente" class="nav-link active">
                   <i class="fas fa-user-cog nav-icon"></i>
                   <p>Mant. Pacientes</p>
                 </a>
@@ -145,18 +145,20 @@
         <!-- Main row -->
         <div class="row">
           <div class="col-md-12">
-            <div class="card card-olive">
+            <div class="card">
               <div class="card-header">
-                <h5 class="card-title"> Facebook: HESRAM  || YouTube: HESRAMRD</h5>
+                <h5 class="card-title">Consultorio KF Dental</h5>
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
                     <i class="fas fa-minus"></i>
                   </button>
+              </div>
+              </div>
+              <div class="card-body">
+                <div class="container">
+                  @yield('contenido')
                 </div>
               </div>
-                  <div class="card-body">
-                  <h5>Escriba Su Contenido Aqui</h5>
-                </div>
             </div>
           </div>
         </div>
@@ -167,7 +169,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2019 <a href="http://hesram.tk" target="_blank">HESRAM</a>.</strong>
+    <strong>Copyright &copy; 2014-2019 <a href="http://hesram.tk">HESRAM</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> Dental 1.0.0
@@ -183,24 +185,24 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="adminLTE/plugins/jquery/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="adminLTE/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="{{asset('adminLTE/plugins/jquery/jquery.min.js')}}"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
+<!-- <script>
   $.widget.bridge('uibutton', $.ui.button)
-</script>
+</script> -->
 <!-- Bootstrap 4 -->
-<script src="adminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('adminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- ChartJS -->
-<script src="adminLTE/plugins/chart.js/Chart.min.js"></script>
+<script src="{{asset('adminLTE/plugins/chart.js/Chart.min.js')}}"></script>
 
 <!-- overlayScrollbars -->
-<script src="adminLTE/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="{{asset('adminLTE/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="adminLTE/dist/js/adminlte.js"></script>
+<script src="{{asset('adminLTE/dist/js/adminlte.js')}}"></script>
 
 <!-- AdminLTE for demo purposes -->
-<script src="adminLTE/dist/js/demo.js"></script>
+<script src="{{asset('adminLTE/dist/js/demo.js')}}"></script>
+
+
 </body>
 </html>
